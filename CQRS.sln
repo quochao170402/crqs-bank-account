@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Write", "CQRS.Write\CQRS.Write.csproj", "{F2381068-43D7-4E79-86DC-6F4FC3942680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Read", "CQRS.Read\CQRS.Read.csproj", "{4E994CF8-08BE-423E-B37E-11FAE26DEB36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{98DEFE9B-DC92-48BA-B391-4A4724144D56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2381068-43D7-4E79-86DC-6F4FC3942680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2381068-43D7-4E79-86DC-6F4FC3942680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2381068-43D7-4E79-86DC-6F4FC3942680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2381068-43D7-4E79-86DC-6F4FC3942680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E994CF8-08BE-423E-B37E-11FAE26DEB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E994CF8-08BE-423E-B37E-11FAE26DEB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E994CF8-08BE-423E-B37E-11FAE26DEB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E994CF8-08BE-423E-B37E-11FAE26DEB36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DEFE9B-DC92-48BA-B391-4A4724144D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DEFE9B-DC92-48BA-B391-4A4724144D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DEFE9B-DC92-48BA-B391-4A4724144D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DEFE9B-DC92-48BA-B391-4A4724144D56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
