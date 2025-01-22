@@ -31,6 +31,23 @@ This project demonstrates the implementation of the **CQRS (Command Query Respon
 
 ---
 
+## Architecture
+
+![Bank Account Diagram](./docs/CQRS.png)
+
+### Write Side (Command Service)
+- **MSSQL Database**: Stores the state of the bank account (account holder, balance, etc.).
+- **MassTransit + RabbitMQ**: Used to publish events (e.g., `BankAccountCreated`, `Deposited`, `Withdrew`, `BankAccountClosed`) to RabbitMQ after command processing.
+
+### Read Side (Query Service)
+- **MongoDB**: Stores the read model, which is a simplified, denormalized version of the bank account data optimized for querying.
+- **MassTransit**: Listens to the events from RabbitMQ and updates the MongoDB read model accordingly.
+
+### Event-Driven Approach
+The Read Service listens to events published by the Command Service, ensuring that the data is eventually consistent between the write and read models.
+
+---
+
 ## Command Service (Write Side) API Endpoints
 
 ### 1. Create Bank Account
@@ -123,23 +140,6 @@ This project demonstrates the implementation of the **CQRS (Command Query Respon
       "total": 1
     }
     ```
-
----
-
-## Architecture
-
-![Bank Account Diagram](./docs/CQRS.png)
-
-### Write Side (Command Service)
-- **MSSQL Database**: Stores the state of the bank account (account holder, balance, etc.).
-- **MassTransit + RabbitMQ**: Used to publish events (e.g., `BankAccountCreated`, `Deposited`, `Withdrew`, `BankAccountClosed`) to RabbitMQ after command processing.
-
-### Read Side (Query Service)
-- **MongoDB**: Stores the read model, which is a simplified, denormalized version of the bank account data optimized for querying.
-- **MassTransit**: Listens to the events from RabbitMQ and updates the MongoDB read model accordingly.
-
-### Event-Driven Approach
-The Read Service listens to events published by the Command Service, ensuring that the data is eventually consistent between the write and read models.
 
 ---
 
